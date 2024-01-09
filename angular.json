@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Gammaz": {
+    "gammaz": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Gammaz:build:production"
+              "buildTarget": "gammaz:build:production"
             },
             "development": {
-              "buildTarget": "Gammaz:build:development"
+              "buildTarget": "gammaz:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "Gammaz:build"
+            "buildTarget": "gammaz:build"
           }
         },
         "test": {
@@ -99,6 +99,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "gammaz:build:production",
+              "serveTarget": "gammaz:serve:production"
+            },
+            "development": {
+              "buildTarget": "gammaz:build:development",
+              "serveTarget": "gammaz:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
