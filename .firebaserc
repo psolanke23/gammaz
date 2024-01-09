@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "gammaz-e4f96"
+  },
+  "targets": {
+    "gammaz-e4f96": {
+      "hosting": {
+        "gammaz": [
+          "gammaz-e4f96"
+        ]
+      }
+    }
   }
 }
