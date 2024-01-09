@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/gammaz",
+    "public": "dist/gammaz/server",
     "ignore": [
       "firebase.json",
       "**/.*",
